@@ -27,47 +27,43 @@ a {
 
 /* custom */
 .grid-container {
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Horizontal tiling for 5 tiles */
-  grid-auto-rows: 200px; /* Each row has a height of 200px */
-  grid-gap: 20px; /* Gap between grid items */
-  width: 100%;
-  justify-content: center; /* Center grid horizontally */
-  align-items: center; /* Center grid vertically */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 100%;
 }
+
 
 .grid-item {
   border: 2px solid #4e4e4e;
-  padding: 5px;
+  width: 200px;
+  height: 210px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Vertically distribute space */
-  align-items: center; /* Horizontally center content */
   border-radius: 12.5px;
   background-color: #242424;
   transition: transform 0.2s cubic-bezier(0,.75,.25,1);
-  transform-origin: center;
   backface-visibility: hidden;
-  transform: translateZ(0);
-  -webkit-font-smoothing: subpixel-antialiased;
+  margin: 0 auto;
 }
+
+
 
 .app-title {
   font-weight: bold;
   font-size:15px;
-  margin-bottom: 10px; /* Add some space between title and description */
-  overflow: hidden; /* Prevent text overflow */
-  white-space: nowrap; /* Prevent text wrapping */
-  text-overflow: ellipsis; /* Display ellipsis for overflowed text */
+  margin-bottom: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .app-description {
-  flex-grow: 1; /* Allow description to expand */
-  overflow: hidden; /* Prevent text overflow */
-  white-space: nowrap; /* Prevent text wrapping */
-  text-overflow: ellipsis; /* Display ellipsis for overflowed text */
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: unset;
   color: #808080;
 }
 
@@ -76,17 +72,17 @@ a {
   max-height: 100%;
   width: auto;
   height: 100px;
-  margin: auto; /* Center image */
+  margin: auto;
   padding: 10px;
 }
 
 .grid-item:hover {
-  transform: scale(1.05); /* Enlarge by 5% on hover */
+  transform: scale(1.05);
 }
 
 .centered-box {
   text-align: center;
   margin: 0 auto;
-  width: 50%; /* Adjust the width as needed */
-  padding: 20px; /* Default padding */
+  width: 50%;
+  padding: 20px;
 }
