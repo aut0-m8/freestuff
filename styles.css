@@ -86,3 +86,19 @@ a {
   width: 50%;
   padding: 20px;
 }
+
+.fade-in-text {
+  opacity: 0; /* Initially hidden */
+  animation: fade 1s cubic-bezier(0,.50,.25,1) forwards; /* Animation duration and fill mode */
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
