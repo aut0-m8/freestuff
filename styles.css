@@ -25,15 +25,14 @@ a {
   color: #dedede;
 }
 
-/* custom */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Adjust the number of columns as needed */
-  grid-gap: 10px; /* Adjust the gap between iframes */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
   justify-content: center;
   align-content: center;
-  justify-items: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
+  justify-items: center;
+  align-items: center;
 }
 
 
